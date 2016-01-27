@@ -1,18 +1,22 @@
 {
-    "name": "labzone/youtube-downloader",
+    "name": "AlbertKampde/youtube-downloader",
     "description": "PHP library to download video",
     "keywords": ["youtube", "download"],
     "license": "MIT",
     "type": "library",
     "authors": [
-        {
-            "name": "Chellem"
-        }
+        {"name": "Chellem"}
+    ],
+    "contributors": [
+        {"name": "Albert Campde"}
     ],
     "require": {
         "php": ">=5.4.0",
         "symfony/process": ">=2.3",
         "react/react": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "5.1.4"
     },
     "scripts":{
         "post-update-cmd":[

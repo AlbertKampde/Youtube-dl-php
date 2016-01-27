@@ -1,6 +1,8 @@
 <?php
 
 namespace Youtubedl;
+use Exception;
+use Youtubedl\Option\IPv4;
 
 /**
  * @method Option setOutput(string $output)
@@ -31,14 +33,39 @@ class Option
 
     public function __toString()
     {
-        return $this->format();
+        return $this->formatAll();
     }
 
-    private function format()
+    /**
+     *
+     */
+    public function setAsIPv4()
+    {
+        $this->options[] = (new IPv4());
+    }
+
+    /**
+     * @throws Exception
+     * @return string
+     */
+    public function format()
+    {
+        throw new Exception('Must be implemented by the child classes');
+    }
+
+    /**
+     * @return string
+     * @throws Exception
+     */
+    private function formatAll()
     {
         $output = '';
         foreach ($this->options as $key => $option) {
-            $output .= "--{$key} {$option} ";
+            if ($option instanceof Option) {
+                $output .= $option->format();
+            } else {
+                $output .= "--{$key} {$option} ";
+            }
         }
 
         return $output;

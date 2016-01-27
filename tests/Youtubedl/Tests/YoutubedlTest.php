@@ -6,6 +6,9 @@ use Youtubedl\Youtubedl;
 
 class YoutubedlTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * @var Youtubedl
+     */
     protected $youtubedl;
 
     /**
