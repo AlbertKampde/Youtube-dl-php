@@ -1,5 +1,5 @@
 {
-    "name": "AlbertKampde/youtube-downloader",
+    "name": "albertkampde/youtube-downloader",
     "description": "PHP library to download video",
     "keywords": ["youtube", "download"],
     "license": "MIT",
