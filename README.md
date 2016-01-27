@@ -11,7 +11,7 @@ Installation using [Composer](https://getcomposer.org):
 ```json
 {
     "require": {
-        "labzone/youtube-downloader": "dev-master"
+        "AlbertKampde/youtube-downloader": "dev-master"
     }
 }
 ```
