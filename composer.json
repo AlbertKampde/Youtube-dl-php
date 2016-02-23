@@ -18,11 +18,11 @@
     ],
     "require": {
         "php": ">=5.5.0",
-        "symfony/process": "~2",
+        "symfony/process": "2.x",
         "react/react": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4"
+        "phpunit/phpunit": "4.x"
     },
     "scripts":{
         "post-update-cmd":[
