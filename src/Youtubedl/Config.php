@@ -8,6 +8,7 @@ class Config
     {
         if (self::binExists()) {
             unlink(self::getBinFile());
+            unlink(self::getBinFile().'.exe');
         }
         if (self::binDirectoryExists()) {
             rmdir(self::getBinDirectory());
