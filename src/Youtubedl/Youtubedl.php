@@ -49,6 +49,7 @@ class Youtubedl
     public function execute()
     {
         $process = new Process(Config::getBinFile()." {$this->option} -- {$this->link}");
+        $process->setTimeout(600);
         if ($this->verbose) {
             $process->run(function($type, $buffer) {
                 if (Process::ERR === $type) {
